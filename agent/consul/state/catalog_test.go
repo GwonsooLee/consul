@@ -4310,7 +4310,7 @@ func TestStateStore_IngressGatewaysForService(t *testing.T) {
 		require.Equal("ingress1", results[0].Service.ID)
 	}
 
-	// Lookup for service3, should only get one ingress gateway.
+	// Lookup for service3, should get no ingress gateways.
 	{
 		idx, results, err := s.IngressGatewaysForService(ws, "service3", nil)
 		require.NoError(err)
